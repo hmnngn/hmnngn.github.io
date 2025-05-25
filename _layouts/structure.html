@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Yellowtail&display=swap" rel="stylesheet">
+    
+    <title>David Hamonangan</title>
+</head>
+<body>
+    <header>
+        {%- assign default_paths = site.pages | map: "path" -%}
+        {%- assign page_paths = site.minima.nav_pages | default: default_paths -%}
+        <a href="{{ '/' | relative_url }}" class="logo">hmnngn</a>
+
+        <nav>
+            {% if page.url == "/" %}
+            <a href="{{ '/' | relative_url }}" class="active">Home</a>
+            {% else %}
+            <a href="{{ '/' | relative_url }}">Home</a>
+            {% endif %}
+            
+            {% for path in page_paths %}
+            {%- assign hyperpage = site.pages | where: "path", path | first -%}
+            {%- if hyperpage.title %}
+                {% if page.url == hyperpage.url %}
+                <a href="{{ hyperpage.url | relative_url }}" class="active">{{ hyperpage.title | escape }}</a>
+                {% else %}
+                <a href="{{ hyperpage.url | relative_url }}">{{ hyperpage.title | escape }}</a>
+                {% endif %}
+            {%- endif -%}
+            {%- endfor %}
+        </nav>
+    </header>
+    <div class="container">
+        <section class="home">
+            {{ content }}
+        </section>
+    </div>
+</body>
+</html>
