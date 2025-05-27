@@ -1,7 +1,7 @@
 ---
 layout: structure
 title: Portofolio
-permalink: /about/
+permalink: /portofolio/
 ---
 
 <div class="about">
