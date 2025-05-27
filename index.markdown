@@ -6,7 +6,7 @@ layout: structure
 ---
 
 <div class="home-img">
-    <img src="{{ '/assets/images/main.png' | relative_url }}" alt="">
+    <img draggable="false" src="{{ '/assets/images/main.png' | relative_url }}" alt="">
 </div>
 <div class="home-content">
     <h1>Hi, It's <span>David</span></h1>
