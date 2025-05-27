@@ -16,6 +16,7 @@ layout: structure
         <a href="https://www.linkedin.com/in/hamonangan-dh/"><i class="fa-brands fa-linkedin"></i></a>
         <a href="https://github.com/hmnngn"><i class="fa-brands fa-github"></i></a>
         <a href="https://www.instagram.com/hmnngn/"><i class="fa-brands fa-instagram"></i></a>
+        <a href="https://wa.me/6281220826749"><i class="fa-brands fa-whatsapp"></i></a>
     </div>
     <a href="mailto:hamonangan.dh@gmail.com" class="btn">Tell me what you need</a>
 </div>
